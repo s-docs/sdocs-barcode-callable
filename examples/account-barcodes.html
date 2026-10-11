@@ -1,0 +1,18 @@
+<!--<callable><class>SDocsBarcodeCallable</class><action>qr</action><args>{"field":"Website","key":"websiteqr","module":"3pt","level":"M"}</args></callable>-->
+<!--<callable><class>SDocsBarcodeCallable</class><action>code128</action><args>{"field":"AccountNumber","key":"accountbarcode","module":"1.2pt","height":"36pt"}</args></callable>-->
+<!--<callable><class>SDocsBarcodeCallable</class><action>qr</action><args>{"field":"Owner.Email","key":"ownerqr","module":"2.25pt","onerror":"blank"}</args></callable>-->
+<h1>{{!Account.Name}}</h1>
+<table style="width: 100%; border-collapse: collapse">
+  <tr>
+    <td style="width: 50%; vertical-align: top">
+      <p>Visit us online:</p>
+      {{{!websiteqr}}}
+    </td>
+    <td style="width: 50%; vertical-align: top">
+      <p>Account number {{!Account.AccountNumber}}:</p>
+      {{{!accountbarcode}}}
+      <p>Account owner:</p>
+      {{{!ownerqr}}}
+    </td>
+  </tr>
+</table>
